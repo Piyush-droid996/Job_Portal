@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 import { NavLink, Outlet } from "react-router-dom";
-import logo from "../assets/images/logo.png"// Adjust the path as per your project structure
+import logo from "../assets/images/logo.png"; // Adjust the path as per your project structure
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,13 +27,19 @@ const NavBar = () => {
         </div>
         <ul className={`nav-ul ${isOpen ? "show" : ""}`}>
           <li className="nav-li">
-            <NavLink activeClassName="active" to="/" end={true}>Home</NavLink>
+            <NavLink activeClassName="active" to="/" end={true}>
+              HOMIEE
+            </NavLink>
           </li>
           <li className="nav-li">
-            <NavLink activeClassName="active" to="/jobs">Find Jobs</NavLink>
+            <NavLink activeClassName="active" to="/jobs">
+              Find Jobs
+            </NavLink>
           </li>
           <li className="nav-li">
-            <NavLink activeClassName="active" to="/add">Add Job</NavLink>
+            <NavLink activeClassName="active" to="/add">
+              Add Job
+            </NavLink>
           </li>
         </ul>
       </div>
