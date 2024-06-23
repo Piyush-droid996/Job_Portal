@@ -1,0 +1,104 @@
+.navbar {
+  background-color: aliceblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.logo-img {
+  width: 120px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.nav-title {
+  margin-right: auto; /* Pushes the title to the left */
+}
+
+.nav-toggle {
+  display: none; /* Initially hide the hamburger menu on larger screens */
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #000;
+  border-radius: 3px;
+}
+
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: aliceblue;
+  display: flex;
+}
+
+.nav-li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-li a {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+   /* Smooth transition for color change */
+}
+
+.nav-li a:hover {
+  background-color: cadetblue;
+  
+}
+
+.active {
+  background-color: cadetblue;
+  color: white; /* Change text color when active */
+  
+}
+
+@media screen and (max-width: 768px) {
+  .nav-container {
+    padding: 10px;
+  }
+
+  .nav-toggle {
+    display: block; /* Show the hamburger menu on smaller screens */
+  }
+
+  .nav-ul {
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: aliceblue;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .nav-ul.show {
+    max-height: 200px; /* Adjust as needed */
+  }
+}
