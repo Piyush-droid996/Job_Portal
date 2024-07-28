@@ -1,0 +1,50 @@
+/* Home.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-left,
+  .col-right {
+    padding: 1rem;
+  }
+  
+  .col-left {
+    width: 100%;
+    max-width: 33.3333%;
+  }
+  
+  .col-right {
+    width: 100%;
+    max-width: 66.6667%;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .paragraph {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: #4a5568; /* Gray color */
+    margin-bottom: 1.5rem;
+  }
+  
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+  

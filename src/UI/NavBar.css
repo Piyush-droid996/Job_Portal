@@ -5,11 +5,11 @@
   width: 100%;
   z-index: 1;
 }
+
 .logo-img {
   width: 120px; /* Adjust width as needed */
   height: auto; /* Maintain aspect ratio */
 }
-
 
 .nav-container {
   display: flex;
@@ -63,18 +63,16 @@
   color: black;
   padding: 14px 16px;
   text-decoration: none;
-   /* Smooth transition for color change */
+  transition: color 0.3s; /* Smooth transition for color change */
 }
 
 .nav-li a:hover {
   background-color: cadetblue;
-  
 }
 
 .active {
   background-color: cadetblue;
   color: white; /* Change text color when active */
-  
 }
 
 @media screen and (max-width: 768px) {
