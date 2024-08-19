@@ -43,7 +43,7 @@ With a scalable design, this portal can adapt to future needs, setting a strong 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Piyush-droid996/Freelance-Job-Portal.git
+   git clone https://github.com/Piyush-droid996/Job_Portal.git
 2. Navigate to the project directory:
    cd freelance-job-portal
 3. Install frontend dependencies:
