@@ -57,10 +57,8 @@ Job_Portal/
 └── ...
 🧩 Components
 Component	Description
-📋 ManageJobs	Allows clients to add, edit, and delete jobs.
-📝 JobListing	Displays a list of job opportunities for freelancers.
-👤 UserProfile	Manages user profiles, including portfolios and job history.
-⚙️ AdminDashboard	Provides administrative functionalities for platform management.
+![Screenshot 2024-09-11 014510](https://github.com/user-attachments/assets/4f735059-9aa9-49ac-a210-7f9c0dec1c77)
+
 🌐 API Endpoints
 Method	Endpoint	Description
 GET	/jobs	Retrieve all job listings.
