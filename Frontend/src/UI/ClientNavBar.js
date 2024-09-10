@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Button } from "react-bootstrap";
 import logo from "../assets/images/logo.png";
 import './NavBar.css';
 
-const NavBar = () => {
+const ClientNavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -13,12 +12,24 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleLogout = () => {
+    const confirmLogout = window.confirm("Are you sure you want to log out?");
+    if (confirmLogout) {
+      navigate("/");
+    }
+  };
+
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    alert("Sorry, you are already on the home page.");
+  };
+
   return (
     <nav className="bg-white shadow-md header">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <NavLink to="/" end={true}>
+            <NavLink to="/ClientHome" end={true}>
               <img src={logo} alt="Logo" className="h-8 w-auto" />
             </NavLink>
           </div>
@@ -37,46 +48,30 @@ const NavBar = () => {
           <div className={`${isOpen ? 'block' : 'hidden'} lg:block`}>
             <div className="ml-10 flex items-baseline space-x-4">
               <NavLink
-                to="/home"
+                to="/ClientHome"
                 className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
-                style={{ textDecoration: 'none' }}
+                onClick={handleHomeClick}
               >
                 Home
               </NavLink>
               <NavLink
-                to="/about"
+                to="/ClientHome/manage-jobs"
                 className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
-                style={{ textDecoration: 'none' }}
               >
-                About
+                Manage Jobs
               </NavLink>
-              {/* <NavLink
-                to="/blog1"
-                className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
-                style={{ textDecoration: 'none' }}
-              >
-                Blog
-              </NavLink> */}
               <NavLink
-                to="/jobs"
+                to="/profile"
                 className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
-                style={{ textDecoration: 'none' }}
               >
-                Find Jobs
+                Profile
               </NavLink>
-              <Link
-                to="/"
+              <button
+                onClick={handleLogout}
                 className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
               >
-                LogOut
-              </Link>
-              <Button
-                variant="secondary"
-                className="px-3 py-2 rounded-md text-sm font-medium"
-                onClick={() => navigate('/signup')}
-              >
-                SignUp
-              </Button>
+                Logout
+              </button>
             </div>
           </div>
         </div>
@@ -85,4 +80,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default ClientNavBar;

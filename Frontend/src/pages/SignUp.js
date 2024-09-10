@@ -1,33 +1,17 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import "./SignUp.css";
+import './SignUp.css';
 
 const SignUp = () => {
   const [validated, setValidated] = useState(false);
 
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-    loginAs: "",
-  });
-  // Handler to update form data
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.currentTarget;
 
     const firstName = form.elements.firstName.value;
     const lastName = form.elements.lastName.value;
-    const email = form.elements.email.value;
+    const email = form.elements.email.value
     const password = form.elements.password.value;
     const confirmPassword = form.elements.confirmPassword.value;
 
@@ -58,9 +42,7 @@ const SignUp = () => {
     // Password Validation
     if (!passwordRegex.test(password)) {
       valid = false;
-      alert(
-        "Password should be at least 8 characters long and include one uppercase letter, one lowercase letter, and one number."
-      );
+      alert("Password should be at least 8 characters long and include one uppercase letter, one lowercase letter, and one number.");
     }
 
     // Confirm Password Validation
@@ -71,19 +53,8 @@ const SignUp = () => {
 
     if (valid && form.checkValidity()) {
       setValidated(true);
-      try {
-        await axios.post(
-          "http://localhost:8080/jobPortal/freelancer/register",
-          formData
-        );
-        navigate("/"); // Redirect after successful submission
-      } catch (error) {
-        console.error(
-          "Error submitting form:",
-          error.response ? error.response.data : error.message
-        );
-        alert("An error occurred while submitting the form.");
-      }
+      // Form submission logic here
+      console.log("Form submitted successfully!");
     } else {
       setValidated(false);
     }
@@ -101,8 +72,6 @@ const SignUp = () => {
                 <Form.Control
                   type="text"
                   name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
                   placeholder="Enter your first name"
                   required
                 />
@@ -112,8 +81,6 @@ const SignUp = () => {
                 <Form.Control
                   type="text"
                   name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
                   placeholder="Enter your last name"
                   required
                 />
@@ -123,8 +90,6 @@ const SignUp = () => {
                 <Form.Control
                   type="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   placeholder="Enter your email address"
                   required
                 />
@@ -134,8 +99,6 @@ const SignUp = () => {
                 <Form.Control
                   type="password"
                   name="password"
-                  value={formData.password}
-                  onChange={handleChange}
                   placeholder="Enter your password"
                   required
                 />
@@ -145,21 +108,13 @@ const SignUp = () => {
                 <Form.Control
                   type="password"
                   name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
                   placeholder="Confirm your password"
                   required
                 />
               </Form.Group>
               <Form.Group className="mb-4">
                 <Form.Label>Applying As</Form.Label>
-                <Form.Control
-                  as="select"
-                  name="loginAs"
-                  value={formData.loginAs}
-                  onChange={handleChange}
-                  required
-                >
+                <Form.Control as="select" required>
                   <option value="">Select an option</option>
                   <option value="freelancer">As a Freelancer</option>
                   <option value="client">As a Client</option>

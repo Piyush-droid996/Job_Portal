@@ -1,8 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './NewsSection.css'; // Ensure this file exists and contains the required styles
 import { Link } from 'react-router-dom';
+import './NewsSection.css';
 import interview from "../assets/images/GroupInterview.jpg";
 import interview_pre from "../assets/images/interviewPrepare.jpg";
 import Job from "../assets/images/Job_Vacancy.jpg";
@@ -13,7 +12,7 @@ const NewsArticle = () => {
       <Row className="sec-title text-center mb-5">
         <Col>
           <h2>Recent News Articles</h2>
-          <div className="text">Fresh job-related .</div>
+          <div className="text">Fresh job-related content.</div>
         </Col>
       </Row>
       <Row>
@@ -23,17 +22,16 @@ const NewsArticle = () => {
               variant="top" 
               src={Job} 
               alt="Discover Your Dream Job" 
-              className="custom-card-img" // Apply custom CSS class for styling
+              className="custom-card-img"
             />
             <Card.Body>
               <ul className="post-meta list-unstyled mb-2">
-                {/* <li><a href="#">August 31, 2021</a></li> */}
-                {/* <li><a href="#">12 Comments</a></li> */}
+                {/* <li>12 Comments</li> */}
               </ul>
               <Card.Title><Link to="/blog/1">Discover Your Dream Job</Link></Card.Title>
               <Card.Text>
                 Explore the latest job opportunities that match your skills and interests. 
-                Find the perfect job for you that helps to move Forward in Career.
+                Find the perfect job for you that helps you move forward in your career.
               </Card.Text>
               <Link className="read-more" to="/blog/1">
                 Read More <i className="fa fa-angle-right"></i>
@@ -47,12 +45,11 @@ const NewsArticle = () => {
               variant="top" 
               src={interview} 
               alt="Master Your Job Interviews" 
-              className="custom-card-img" // Apply custom CSS class for styling
+              className="custom-card-img"
             />
             <Card.Body>
               <ul className="post-meta list-unstyled mb-2">
-                {/* <li><a href="#">August 31, 2021</a></li> */}
-                {/* <li><a href="#">8 Comments</a></li> */}
+                {/* <li>8 Comments</li> */}
               </ul>
               <Card.Title><Link to="/blog/2">Master Your Job Interviews</Link></Card.Title>
               <Card.Text>
@@ -71,12 +68,11 @@ const NewsArticle = () => {
               variant="top" 
               src={interview_pre} 
               alt="How to Prepare for Interviews Like a Pro" 
-              className="custom-card-img" // Apply custom CSS class for styling
+              className="custom-card-img"
             />
             <Card.Body>
               <ul className="post-meta list-unstyled mb-2">
-                {/* <li><a href="#">July 3, 2024</a></li> */}
-                {/* <li><a href="#">5 Comments</a></li> */}
+                {/* <li>5 Comments</li> */}
               </ul>
               <Card.Title><Link to="/blog/3">How to Prepare for Interviews Like a Pro</Link></Card.Title>
               <Card.Text>

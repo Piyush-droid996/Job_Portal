@@ -1,9 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import './AboutSection.css'; // Assuming you still have a CSS file for custom styles
-import aboutImage from '../assets/images/about.jpg'; // Import the image
+
 import mission_Image from '../assets/images/mission.jpg';
-import vision_Image from '../assets/images/vision.jpg';
 import team_Image from '../assets/images/team.jpg';
 import why from '../assets/images/why.jpg';
 import welcome from '../assets/images/welcome.jpg';

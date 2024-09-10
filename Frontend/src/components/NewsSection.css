@@ -1,10 +1,5 @@
-.custom-card-img {
-  height: 278px; /* Set the desired height */
-  object-fit: cover; /* Ensure the image covers the entire area without distortion */
-}
-
 .news-section {
-  padding: 50px 0;
+  padding: 40px 0;
 }
 
 .sec-title {
@@ -13,34 +8,65 @@
 
 .sec-title h2 {
   font-size: 2.5rem;
+  color: #333;
   margin-bottom: 10px;
 }
 
 .sec-title .text {
   font-size: 1.2rem;
+  color: #666;
+}
+
+.custom-card-img {
+  border-radius: 0.5rem; /* Rounded corners for images */
+  width: 100%; /* Ensure images take full width of the card */
+  height: 300px; /* Fixed height for images */
+  object-fit: cover; /* Ensure images cover the container without distortion */
+}
+
+.card {
+  border: none; /* Remove default card border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  border-radius: 0.5rem; /* Rounded corners for card */
+}
+
+.card-body {
+  padding: 1.5rem;
 }
 
 .post-meta {
-  font-size: 0.9rem;
-  color: #777;
+  margin-bottom: 1rem;
 }
 
 .post-meta li {
-  display: inline;
-  margin-right: 10px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card-title a {
-  color: #000;
-  text-decoration: none;
+  color: #007bff; /* Bootstrap primary color */
+  text-decoration: none; /* Remove underline */
 }
 
 .card-title a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
 }
 
 .read-more {
-  color: #007bff;
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #007bff; /* Bootstrap primary color */
   text-decoration: none;
 }
 
@@ -49,5 +75,5 @@
 }
 
 .read-more i {
-  margin-left: 5px;
+  margin-left: 0.5rem;
 }

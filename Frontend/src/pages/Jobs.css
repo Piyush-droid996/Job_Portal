@@ -1,64 +1,77 @@
-.search {
-  justify-content: center;
-  margin: auto;
+/* Jobs.css */
+
+/* General Container Styling */
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.job-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.job-card {
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Card Styling */
+.card {
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 300px;
-  z-index: -1;
 }
 
-.job-card:hover {
+.card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.techs {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  justify-content: center;
+/* Card Title Styling */
+.card-title {
+  font-size: 1.25rem;
+  color: #007bff; /* Matches Bootstrap's primary color */
+  font-weight: bold;
 }
 
-.techs span {
-  background-color: #979ba4;
-  color: #fff;
-  font-size: smaller;
-  border-radius: 5px;
-  padding: 3px 8px;
-  margin: 3px;
-}
-
-.details-button {
-  background-color: green;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+/* Card Text Styling */
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
   margin-top: 10px;
 }
 
-.details-button:hover {
-  background-color: darkgreen;
+/* Button Styling */
+.card .btn-primary {
+  width: 100%;
+  padding: 10px;
 }
 
-.job-card a {
+.card .btn-link {
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #007bff;
+  padding-top: 10px;
+}
+
+.btn-primary:hover, .btn-link:hover {
   text-decoration: none;
-  margin-top: 12px;
-  /* margin: 3px;
-  padding: 2px; */
+  opacity: 0.9;
 }
+
+/* Alert Styling */
+.alert {
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1.05rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+}
+ 

@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { FaUnlockAlt } from "react-icons/fa";
-import "./HomeScreen.css";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { FaUnlockAlt } from 'react-icons/fa';
+import './HomeScreen.css';
 
 const HomeScreen = () => {
   const [validated, setValidated] = useState(false);
-  const [loginType, setLoginType] = useState("Freelancer");
-  const [error, setError] = useState("");
+  const [loginType, setLoginType] = useState('Freelancer');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -29,33 +28,30 @@ const HomeScreen = () => {
 
     if (!passwordRegex.test(password)) {
       valid = false;
-      alert(
-        "Password should be at least 8 characters long and include one uppercase letter, one lowercase letter, and one number."
-      );
+      alert("Password should be at least 8 characters long and include one uppercase letter, one lowercase letter, and one number.");
     }
 
-    // if (valid && form.checkValidity()) {
-    //   setValidated(true);
-    //   if (loginType === "Freelancer") {
-    //     navigate("/home"); // Redirect to Home page for Freelancer
-    //   }
-    //   if (loginType === "Client") {
-    //     navigate("/home"); // Redirect to Home page for Client
-    //   }
-    //   if (loginType === "Admin") {
-    //     navigate("/home"); // Redirect to Home page for Admin
-    //   }
-    // } else {
-    //   setValidated(false);
-    // }
-    if (loginType === "Freelancer") {
-      navigate("/home");
-    } else if (loginType === "Client") {
-      navigate("/client-dashboard");
-    } else if (loginType === "Admin") {
-      navigate("/admin-dashboard");
+    if (valid && form.checkValidity()) {
+      setValidated(true);
+
+      if (loginType === 'Freelancer') {
+        navigate('/home'); // Redirect to Home page for Freelancer
+      } else if (loginType === 'Client') {
+        const clientHasPermission = true; // Replace with your actual condition logic
+        if (clientHasPermission) {
+          navigate('/ClientHome'); // Redirect to ClientHome page
+        } else {
+          alert("You do not have permission to access this page.");
+        }
+      } else if (loginType === 'Admin') {
+        const adminHasPermission = true; // Replace with your actual condition logic
+        if (adminHasPermission) {
+          navigate('/AdminHome'); // Redirect to AdminHome page
+        } else {
+          alert("You do not have permission to access this page.");
+        }
+      }
     } else {
-      setError("Unknown role received.");
       setValidated(false);
     }
   };
@@ -67,23 +63,18 @@ const HomeScreen = () => {
           <Col lg={6} md={6} className="d-flex">
             <div className="text-white max-w400 align-self-center">
               <h2 className="mb-3">Welcome to Job Board</h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry has been the industry.
-              </p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry.</p>
             </div>
           </Col>
           <Col lg={6} md={6}>
             <div className="login-2 submit-resume p-4 seth">
               <Form noValidate validated={validated} onSubmit={handleLogin}>
-                <p className="font-weight-bold">
-                  If you have an account with us, please log in.
-                </p>
+                <p className="font-weight-bold">If you have an account with us, please log in.</p>
                 <Form.Group className="mb-3">
                   <Form.Label htmlFor="loginType">Login As</Form.Label>
-                  <Form.Select
-                    name="loginType"
-                    value={loginType}
+                  <Form.Select 
+                    name="loginType" 
+                    value={loginType} 
                     onChange={(e) => setLoginType(e.target.value)}
                     required
                   >

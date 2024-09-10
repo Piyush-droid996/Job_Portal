@@ -5,7 +5,6 @@ import "./ProcessSection.css"
 import registerImg from '../assets/images/RegisterImg.png';
 import candidate from '../assets/images/candidateImg.png'
 import Resume from '../assets/images/cv.png'
-import { Link } from 'react-router-dom';
 const ProcessSection = () => {
   return (
     <section className="process-section pt-0">
@@ -16,7 +15,6 @@ const ProcessSection = () => {
         </div>
         <Row className="aos-init aos-animate" data-aos="fade-up">
           <Col lg={4} md={6} sm={12} className="process-block">
-            <Link to="/signup" className="link-wrapper">
             <div className="icon-box">
               <Image
                 alt="Register an account"
@@ -27,7 +25,6 @@ const ProcessSection = () => {
                 loading="lazy"
               />
             </div>
-            </Link>
             <h4>Register an account <br />to start</h4>
           </Col>
           <Col lg={4} md={6} sm={12} className="process-block">
