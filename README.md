@@ -1,102 +1,70 @@
-# Freelance Job Portal
+🚀 Freelance Job Portal
+<div align="center"> <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=for-the-badge" alt="React"> <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=spring-boot&logoColor=white&style=for-the-badge" alt="Spring Boot"> <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white&style=for-the-badge" alt="MySQL"> </div>
+The Freelance Job Portal is designed to transform how freelancers and clients connect and collaborate by providing a user-friendly and efficient platform. Built with modern technologies like
+and
+, the portal ensures a robust and scalable solution for the challenges in the gig economy.
 
-The *Freelance Job Portal* is designed to transform how freelancers and clients connect and collaborate by providing a user-friendly and efficient platform. Built with modern technologies like React, Spring Boot, and MySQL, the portal ensures a robust and scalable solution for the challenges in the gig economy.
+🌐 Live Website
 
-## Table of Contents
+🌟 Introduction
+The Freelance Job Portal is built to streamline the process of hiring freelancers and finding freelance jobs. The platform's main goals include:
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Components](#components)
-- [API Endpoints](#api-endpoints)
+Offering an easy-to-use interface.
+Smart algorithms for matching freelancers with the right jobs.
+Integrated tools for seamless communication between freelancers and clients.
+Management of profiles, portfolios, and project details.
+Powerful administrative tools for ensuring smooth operation and scalability.
+✨ Features
+🔐 User Authentication: Secure login and registration for freelancers and clients.
+📊 Job Matching: Advanced algorithms to match freelancers with suitable job opportunities.
+🖼️ Profile Management: Users can manage their profiles, portfolios, and project details.
+🛠️ Admin Dashboard: Powerful tools for administrators to manage the platform and ensure smooth operations.
+🛠️ Technologies Used
+<div align="center"> <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=for-the-badge" alt="React"> <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=spring-boot&logoColor=white&style=for-the-badge" alt="Spring Boot"> <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white&style=for-the-badge" alt="MySQL"> <img src="https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white&style=for-the-badge" alt="Postman"> </div>
+💻 Installation
+bash
+Copy code
+# Clone the repository
+git clone https://github.com/piyush-droid996/Job_Portal.git
+cd Job_Portal
 
-## Introduction
+# Install frontend dependencies
+cd frontend
+npm install
 
-The *Freelance Job Portal* is built to make the process of hiring freelancers and finding freelance jobs more efficient. The platform's main goals include:
+# Set up backend (Java Spring Boot)
+# - Configure MySQL in application.properties
+# - Run the Spring Boot application
 
-- Offering an easy-to-use interface.
-- Smart algorithms for matching freelancers with the right jobs.
-- Integrated tools for seamless communication between freelancers and clients.
-- Management of profiles, portfolios, and project details.
-- Powerful administrative tools for ensuring smooth operation and scalability.
+# Start frontend
+npm start
+🧭 Usage
+Once the application is set up:
 
-With a scalable design, this portal can adapt to future needs, setting a strong foundation for ongoing improvements and innovations in the freelance industry.
-
-## Features
-
-- *User Authentication:* Secure login and registration for freelancers and clients.
-- *Job Matching:* Advanced algorithms to match freelancers with suitable job opportunities.
-- *Profile Management:* Users can manage their profiles, portfolios, and project details.
-- *Admin Dashboard:* Powerful tools for administrators to manage the platform and ensure smooth operations.
-
-## Technologies Used
-
-- *Frontend:* React
-- *Backend:* Spring Boot
-- *Database:* MySQL
-- *Others:* RESTful APIs
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Piyush-droid996/Job_Portal.git
-2. Navigate to the project directory:
-   cd freelance-job-portal
-3. Install frontend dependencies:
-   cd frontend
-   npm install
-4. Install backend dependencies:
-   cd ../backend
-   mvn install
-5. Set up the MySQL database and configure environment variables.
-6. Start the frontend:
-   cd frontend
-   npm start
-7. Start the backend:
-   cd ../backend
-   mvn spring-boot:run
-## Usage
-
-- Register as a freelancer or client.
-- Post jobs or apply for jobs.
-- Manage profiles, portfolios, and projects.
-- Admins can monitor and manage the platform via the dashboard.
-
-## Folder Structure
-
-
-freelance-job-portal/
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── ...
-├── backend/
-│   ├── src/
-│   │   ├── main/
-│   │   ├── test/
-│   │   └── ...
-├── README.md
+Freelancers can browse job listings, apply for jobs, and manage their portfolios.
+Clients can create, edit, and manage job listings, as well as view freelancer applications.
+Admins have access to an admin dashboard for platform management.
+📁 Folder Structure
+bash
+Copy code
+Job_Portal/
+│
+├── backend/                # Spring Boot backend code
+├── frontend/               # React.js frontend code
+├── README.md               # This README file
+├── .gitignore              # Git ignore configuration
 └── ...
-
-
-## Components
-
-- **Login/Signup Component:** Handles user authentication.
-- **Job Listings Component:** Displays job postings for freelancers to apply.
-- **Profile Component:** Manages user profiles and portfolios.
-- **Admin Dashboard:** Provides administrators with tools to manage the platform.
-
-## API Endpoints
-
-- **Authentication:** `/api/auth/`
-- **Jobs:** `/api/jobs/`
-- **Users:** `/api/users/`
-- **Admin:** `/api/admin/`
+🧩 Components
+Component	Description
+📋 ManageJobs	Allows clients to add, edit, and delete jobs.
+📝 JobListing	Displays a list of jobs for freelancers.
+👤 UserProfile	Manages the profile of a user (either freelancer or client).
+⚙️ AdminDashboard	Provides administrative functionalities to manage the platform.
+🌐 API Endpoints
+GET /jobs: Retrieve a list of all jobs.
+POST /jobs: Create a new job listing.
+PUT /jobs/{id}: Update an existing job listing.
+DELETE /jobs/{id}: Delete a job listing.
+☕ Support the Developer
+If you like this project and want to support further development, you can Buy Me a Coffee!
 
