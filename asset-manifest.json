@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Job_Portal/static/css/main.1fe464ae.css",
+    "main.js": "/Job_Portal/static/js/main.2fcf020f.js",
+    "static/js/787.daa20bc8.chunk.js": "/Job_Portal/static/js/787.daa20bc8.chunk.js",
+    "static/media/mission.jpg": "/Job_Portal/static/media/mission.025ac6ba9ebdef5a2737.jpg",
+    "static/media/welcome.jpg": "/Job_Portal/static/media/welcome.ffee9681c24631ee4c0f.jpg",
+    "static/media/Job_Vacancy.jpg": "/Job_Portal/static/media/Job_Vacancy.aaf4eac9027b4f6b7892.jpg",
+    "static/media/team.jpg": "/Job_Portal/static/media/team.4da7341fda0f27d11533.jpg",
+    "static/media/why.jpg": "/Job_Portal/static/media/why.59ba281d0dae33ee66df.jpg",
+    "static/media/GroupInterview.jpg": "/Job_Portal/static/media/GroupInterview.0a4b06a611f63e1ebbd0.jpg",
+    "static/media/bootstrap-icons.woff?": "/Job_Portal/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/interviewPrepare.jpg": "/Job_Portal/static/media/interviewPrepare.80d0a3a767a23cb06765.jpg",
+    "static/media/bootstrap-icons.woff2?": "/Job_Portal/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/Header_image1.png": "/Job_Portal/static/media/Header_image1.403cb0e37126aa461984.png",
+    "static/media/RegisterImg.png": "/Job_Portal/static/media/RegisterImg.0fb8e39b7ec7a48c222a.png",
+    "static/media/logo.png": "/Job_Portal/static/media/logo.77a92ee6ef58d25dc004.png",
+    "static/media/candidateImg.png": "/Job_Portal/static/media/candidateImg.b427db2593b2bea2e737.png",
+    "static/media/cv.png": "/Job_Portal/static/media/cv.fb355b966114af095678.png",
+    "index.html": "/Job_Portal/index.html",
+    "main.1fe464ae.css.map": "/Job_Portal/static/css/main.1fe464ae.css.map",
+    "main.2fcf020f.js.map": "/Job_Portal/static/js/main.2fcf020f.js.map",
+    "787.daa20bc8.chunk.js.map": "/Job_Portal/static/js/787.daa20bc8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1fe464ae.css",
+    "static/js/main.2fcf020f.js"
+  ]
+}
